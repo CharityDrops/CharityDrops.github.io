@@ -128,7 +128,7 @@ a.share.twt {
 
 
 /* Larger than mobile */
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .container {
     max-width: 300px !important;
   }

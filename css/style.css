@@ -44,3 +44,100 @@ img.logo {
 a {
     color: inherit;
 }
+
+.overlay {
+    height: 100%;
+    display: block;
+    background: rgba(0,0,0,0.4);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.magicbox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    padding-top: 0;
+    z-index: 1500;
+    background: #fff;
+    color: #555;
+    border-radius: 3px;
+    max-width: 300px;
+    width: 90%;
+}
+
+.magicbox .banner {
+    padding: 15px;
+    background: #137752;
+    color: #fff;
+    text-align: center;
+}
+
+.magicbox .content {
+    text-align: center;
+}
+
+.magicbox .content p {
+    padding: 0px 10px;
+}
+
+.magicbox a.share {
+    display: block;
+    text-align: left;
+    padding: 5px;
+    background: #ccc;
+    margin: 5px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    vertical-align: middle;
+    padding: 20px 15px;
+
+
+}
+
+.magicbox .ion {
+    font-size: 32px;
+    width: 70px;
+    text-align: center;
+
+}
+
+.magicbox span {
+    vertical-align: middle;
+    margin-top: -15px;
+    position: relative;
+    display: inline-table;
+}
+
+a.share.fb {
+    background: #3b5998;
+}
+
+a.share.twt {
+    background: #4099FF;
+}
+
+#successMSG {
+    display: none;
+}
+
+
+
+/* Larger than mobile */
+@media (max-width: 400px) {
+  .container {
+    max-width: 300px !important;
+  }
+
+  img.logo {
+      max-width: 100% !important;
+  }
+
+  .magicbox .content .ion {
+      display: none;
+  }
+}

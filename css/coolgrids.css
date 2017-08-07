@@ -122,17 +122,6 @@ there.
 */
 
 
-/* Larger than mobile */
-@media (max-width: 400px) {
-  .container {
-    max-width: 300px !important;
-  }
-
-  img.logo {
-      max-width: 100% !important;
-  }
-}
-
 /* Larger than phablet (also point when grid becomes active) */
 @media (max-width: 550px) {}
 

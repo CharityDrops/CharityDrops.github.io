@@ -2,10 +2,27 @@
 
     <link href="css/coolgrids.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    
+
     <title>CharityDrops | Support and Discover New Charities Every Week</title>
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <META NAME="Description" CONTENT="CharityDrops helps you support and discover new charities every week.">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@drannex42">
+    <meta name="twitter:creator" content="@drannex42">
+    <meta name="twitter:title" content="CharityDrops | Support and Discover New Charities Every Week">
+    <meta name="twitter:description" content="CharityDrops | Support and Discover New Charities Every Week">
+    <meta name="twitter:image" content="https://charitydrops.org/og.png">
+
+    <meta property="og:title" content="CharityDrops | Support and Discover New Charities Every Week" />
+    <meta property="og:url" content="https://charitydrops.org/" />
+    <meta property="og:image" content="https://charitydrops.org/og.png" />
+
 
 </head>
 
@@ -14,6 +31,7 @@
         <div id="inner">
         <div class="container">
             <img src="img/logo.png" class="logo"></img>
+            <div id="notification"></div>
             <p>Every week we are asked by nonprofits to help them out, and every week we split your recurring donation equally among them.</p>
             <p>Total Raised: <strong>12 cups of coffee worth</strong></p>
             <form action="https://charitydrops.glitch.me/charge" method="POST">
@@ -37,3 +55,42 @@
             Created by <a href="https://twitter.com/@drannex42">@drannex42</a>
         </p>
     </div>
+
+
+    <div class="overlay" id="successMSG">
+        <div class="magicbox">
+            <div class="banner">Thanks for donating!</div>
+            <div class="content">
+                <p>Thank you so much! Please tell your friends!</p>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://charitydrops.org/" target="_blank" class="share fb">
+                    <i class="ion ion-social-facebook"></i> 
+                    <span>Share on Facebook</span
+                ></a>
+                <a href="https://twitter.com/intent/tweet?text=I%20just%20donated%20on%20CharityDrops%20by%20%40drannex42&url=https://charitydrops.org" target="_blank" class="share twt">
+                    <i class="ion ion-social-twitter"></i>
+                    <span>Share on Twitter</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+            <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        var success = getParameterByName('success'); // "true"
+
+        if (success == "true") {
+            console.log("donation made")
+            document.getElementById("successMSG").style.display = "block"; 
+        }
+</script>
+
+    </body>
